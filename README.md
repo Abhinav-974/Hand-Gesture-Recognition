@@ -77,9 +77,14 @@ model = load_model('/home/abhinav/ros2_ws/src/hand_gest/hand_gest/mp_hand_gestur
 f = open('/home/abhinav/ros2_ws/src/hand_gest/hand_gest/gesture.names', 'r')
 ```
 Directions to implement this project (project execution) - 
-Open a terminal inside the hand_gest folder inside the hand_gest package (~/ros2_ws/src/hand_gest/hand_gest$). Run the robot.sdf file as - `ign gazebo robot.sdf`
-Open two more terminals, in the root workspace directory (~/ros2_ws$). In the first one, first source the setup file as - `source install/setup.bash`. Then run the main code as - `ros2 run hand_gest hand_gesture_detection`.
-In the third terminal, establish a bridge to allow communication betwen ROS and Gazebo as - `ros2 run ros_ign_bridge parameter_bridge /cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist`. More information on - https://gazebosim.org/docs/fortress/ros2_integration. 
+
+Step 5. Open a terminal inside the hand_gest folder inside the hand_gest package (~/ros2_ws/src/hand_gest/hand_gest). Run the robot.sdf file as - 
+```ign gazebo robot.sdf```
+
+Step 6. Open two more terminals, in the root workspace directory (~/ros2_ws). In the first one, first source the setup file as - ```source install/setup.bash```. Then run the main code as - ```ros2 run hand_gest hand_gesture_detection```.
+
+Step 7. In the third terminal, establish a bridge to allow communication betwen ROS and Gazebo as - ```ros2 run ros_ign_bridge parameter_bridge /cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist```. More information on - https://gazebosim.org/docs/fortress/ros2_integration.
+
 Start the gazebo simulation by pressing the play button. You will see the robot moving according to your hand gesture predictions! Enjoy!
 
 We have provided the given list of gestures - ['okay', 'peace', 'thumbs up', 'thumbs down', 'call me', 'stop', 'rock', 'live long', 'fist', 'smile']. and a mapping between these gestures and the robot velocity commands as - 
