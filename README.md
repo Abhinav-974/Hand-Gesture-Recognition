@@ -2,6 +2,8 @@
 Description - 
 This project aims to use a hand gesture recognition algorithm to control motion of a simulated differential drive robot in Gazebo environment. The main idea behind this is that the recognition program acts as a ROS node, which publishes the predictions as messages to the gazebo environment over a topic, which is usually 'cmd_vel' for velocity manipulation. The hand gesture recognition code uses Mediapipe libraries to detect keypoints on the hand to make predictions. 
 
+Link to the completed project video - https://drive.google.com/file/d/1nVj_BUhzrFpoYhIrNWHwKcgpFyyg91hp/view?usp=sharing
+
 Prerequisites - This project uses Ubuntu 22.04 OS, ROS 2 Humble, Gazebo Fortress (Ignition Gazebo) as the main softwares. You can check the recommended combination of the softwares for your system here - https://gazebosim.org/docs/fortress/ros_installation
 
 Instructions to install ROS 2 - https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
@@ -99,6 +101,8 @@ Step 7. In the third terminal, establish a bridge to allow communication betwen 
 More information on - https://gazebosim.org/docs/fortress/ros2_integration.
 
 Start the gazebo simulation by pressing the play button. You will see the robot moving according to your hand gesture predictions! Enjoy!
+
+An obstacle course has been designed for the robot comprising of fixed walls and animated characters. See if you can make it to the end point on the far right, diagonally opposite to the start position, using the gestures!
 
 Provided list of gestures - ```['okay', 'peace', 'thumbs up', 'thumbs down', 'call me', 'stop', 'rock', 'live long', 'fist', 'smile']```
 
