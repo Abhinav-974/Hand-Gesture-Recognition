@@ -1,4 +1,4 @@
-# Hand_Gesture_Recognition
+# Hand Gesture Recognition
 Using Hand Gesture Predictions to simulate robot motion in Gazebo
 
 Prerequisites - This project uses Ubuntu 22.04 OS, ROS 2 Humble, Gazebo Fortress (Ignition Gazebo) as the main softwares.Note that these 3 are the recommended combination of softwares for your system here - https://gazebosim.org/docs/fortress/ros_installation
