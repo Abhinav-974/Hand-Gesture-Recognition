@@ -9,11 +9,15 @@ Instructions to install Ignition Gazebo - https://gazebosim.org/docs/fortress/in
 
 Directions to implement this project (project setup) - 
 
-Step 1. Create a ROS2 workspace. I'm calling it 'ros2_ws'. Once you build the workspace, and run ```ls``` in the terminal of root directory (~/ros2_ws), you'll see 4  folders) as - ```build  install  log  src```
+Step 1. Create a ROS2 workspace. I'm calling it 'ros2_ws'. Once you build the workspace, and run  ```ls```  in the terminal of root directory (~/ros2_ws), you'll see 4  folders) as -
+```build  install  log  src```.
 
 (Tutorial - https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html)
 
-Step 2. Create a package. I'm calling it 'hand_gest'. Command - ```ros2 pkg create --build-type ament_python hand_gest```. Then, build the package by running - ```colcon build --packages-select hand_gest```. The package contents will look like this - 
+Step 2. Create a package. I'm calling it 'hand_gest'. Command - 
+```ros2 pkg create --build-type ament_python hand_gest```. 
+Then, build the package by running - 
+```colcon build --packages-select hand_gest```. The package contents will look like this - 
 ```hand_gest  package.xml  resource  setup.cfg  setup.py  test```
 
 Step 3. Inside the hand_gest folder inside the hand_gest package, clone the github repo. Edit the generated setup.py and package.xml files as shown - 
@@ -86,9 +90,12 @@ Directions to implement this project (project execution) -
 Step 5. Open a terminal inside the hand_gest folder inside the hand_gest package (~/ros2_ws/src/hand_gest/hand_gest). Run the robot.sdf file as - 
 ```ign gazebo robot.sdf```
 
-Step 6. Open two more terminals, in the root workspace directory (~/ros2_ws). In the first one, first source the setup file as - ```source install/setup.bash```. Then run the main code as - ```ros2 run hand_gest hand_gesture_detection```.
+Step 6. Open two more terminals, in the root workspace directory (~/ros2_ws). In the first one, first source the setup file as - 
+```source install/setup.bash```. Then run the main code as - ```ros2 run hand_gest hand_gesture_detection```.
 
-Step 7. In the third terminal, establish a bridge to allow communication betwen ROS and Gazebo as - ```ros2 run ros_ign_bridge parameter_bridge /cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist```. More information on - https://gazebosim.org/docs/fortress/ros2_integration.
+Step 7. In the third terminal, establish a bridge to allow communication betwen ROS and Gazebo as - 
+```ros2 run ros_ign_bridge parameter_bridge /cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist```. 
+More information on - https://gazebosim.org/docs/fortress/ros2_integration.
 
 Start the gazebo simulation by pressing the play button. You will see the robot moving according to your hand gesture predictions! Enjoy!
 
